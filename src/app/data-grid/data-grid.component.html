@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Time Interval Data</h1>
+  <div class="select-block">
+    <mat-form-field>
+      <mat-select name="timeInterval" placeholder="Time interval"
+                  [(ngModel)]="selectedValue"
+                  (ngModelChange)="getDetails($event)">
+        <mat-option *ngFor="let timeInterval of timeIntervals"
+                    [value]="timeInterval.value">
+          {{timeInterval.text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+  <div class="grid-container" *ngIf="!isLoading">
+    <div *ngFor="let range of ranges" class="grid-column">
+      <span class="header">{{range.time}}</span>
+      <div class="value-column">
+        <p *ngFor="let data of range.items" class="grid-value">
+          {{data.value}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <mat-progress-spinner *ngIf="isLoading"
+    class="example-margin"
+    [color]="color"
+    [mode]="mode"
+    [value]="value">
+  </mat-progress-spinner>
+</div>

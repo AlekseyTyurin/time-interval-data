@@ -1,0 +1,55 @@
+.container {
+  padding: 10px;
+  height: 95%;
+}
+
+.container h1 {
+  text-align: left;
+}
+
+.select-block {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.grid-container {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  height: 600px;
+  border-top: 1px solid darkcyan;
+  border-left: 1px solid darkcyan;
+}
+
+.grid-container .grid-column {
+  min-width: 150px;
+  height: auto;
+}
+
+.grid-container .header {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #04AA6D;
+  color: white;
+  border-right: 1px solid #ddd;
+}
+
+.grid-container span.header:last-child {
+  border-right: none;
+}
+
+.grid-container .grid-value {
+  padding: 0 5px;
+}
+
+
+.mat-progress-spinner {
+  left: 47%;
+  top: 30%;
+}
+
+
